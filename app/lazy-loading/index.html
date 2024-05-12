@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading Images</title>
+    <style>
+        .image-container {
+            width: 100%;
+            height: 800px;
+            margin-bottom: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <img class="lazy" data-src="pic1.png" alt="Lazy loaded image 1">
+    </div>
+    <div class="image-container">
+        <img class="lazy" data-src="pic2.png" alt="Lazy loaded image 2">
+    </div>
+    <div class="image-container">
+        <img class="lazy" data-src="pic3.png" alt="Lazy loaded image 3">
+    </div>
+    <script src="./script1.js" defer></script>
+    <script src="./script2.js" async></script>
+    <script src="./script3.js"></script>
+</body>
+
+</html>
